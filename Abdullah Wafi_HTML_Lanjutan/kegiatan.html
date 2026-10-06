@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pendaftaran Kegiatan Mahasiswa</title>
+</head>
+<body>
+  <!-- Kepala halaman dan navigasi -->
+  <header>
+    <h1>Pendaftaran Kegiatan Mahasiswa</h1>
+    <nav>
+      <a href="index.html">Beranda</a> |
+      <a href="list.html">List</a> |
+      <a href="table.html">Table</a> |
+      <a href="form.html">Form</a> |
+      <a href="semantic.html">Semantic</a> |
+      <a href="kegiatan.html">Kegiatan</a> |
+      <a href="debugging.html">Debugging</a>
+    </nav>
+    <hr>
+  </header>
+  <main>
+    <section>
+      <h2>Informasi dan Ketentuan</h2>
+      <article>
+        <h3>Seminar dan Workshop Web Development</h3>
+        <p>Kegiatan ini terbuka untuk seluruh mahasiswa aktif. Peserta akan belajar membuat website dari dasar.</p>
+        <h4>Ketentuan Peserta</h4>
+        <ul>
+          <li>Mahasiswa aktif</li>
+          <li>Membawa laptop sendiri</li>
+          <li>Hadir 15 menit sebelum acara</li>
+        </ul>
+        <h4>Fasilitas</h4>
+        <ul>
+          <li>Sertifikat</li>
+          <li>Modul pelatihan</li>
+          <li>Konsumsi</li>
+        </ul>
+        <h4>Alur Pendaftaran</h4>
+        <ol>
+          <li>Isi form pendaftaran</li>
+          <li>Tekan tombol Daftar</li>
+          <li>Tunggu konfirmasi melalui email</li>
+        </ol>
+      </article>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Jadwal Kegiatan</h2>
+      <table border="1">
+        <tr><th colspan="4">Jadwal Rangkaian Kegiatan</th></tr>
+        <tr><th>Hari</th><th>Waktu</th><th>Acara</th><th>Ruang</th></tr>
+        <tr><td rowspan="3">Sabtu</td><td>08.00</td><td>Registrasi peserta</td><td>Aula</td></tr>
+        <tr><td>09.00</td><td>Seminar pembuka</td><td>Aula</td></tr>
+        <tr><td>13.00</td><td>Workshop HTML</td><td>Lab 1</td></tr>
+        <tr><td rowspan="2">Minggu</td><td>08.00</td><td>Workshop Form dan Table</td><td>Lab 1</td></tr>
+        <tr><td>14.00</td><td>Penutupan dan pembagian sertifikat</td><td>Aula</td></tr>
+      </table>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Form Pendaftaran</h2>
+      <form>
+        <label for="k_nama">Nama:</label>
+        <input type="text" id="k_nama" name="nama" placeholder="Nama lengkap" required>
+        <br><br>
+        <label for="k_email">Email:</label>
+        <input type="email" id="k_email" name="email" placeholder="nama@email.com" required>
+        <br><br>
+        <label for="k_telepon">Telepon:</label>
+        <input type="tel" id="k_telepon" name="telepon" placeholder="08xxxxxxxxxx" required>
+        <br><br>
+        <label for="k_prodi">Program Studi:</label>
+        <select id="k_prodi" name="prodi">
+          <option value="rpl">Rekayasa Perangkat Lunak</option>
+          <option value="bd">Bisnis Digital</option>
+          <option value="si">Sistem Informasi</option>
+          <option value="ti">Teknik Informatika</option>
+        </select>
+        <br><br>
+        <p>Sesi yang diikuti:</p>
+        <input type="radio" id="k_sabtu" name="sesi" value="sabtu" required>
+        <label for="k_sabtu">Sabtu</label>
+        <input type="radio" id="k_minggu" name="sesi" value="minggu">
+        <label for="k_minggu">Minggu</label>
+        <input type="radio" id="k_keduanya" name="sesi" value="keduanya">
+        <label for="k_keduanya">Keduanya</label>
+        <p>Kebutuhan tambahan:</p>
+        <input type="checkbox" id="k_konsumsi" name="kebutuhan" value="konsumsi">
+        <label for="k_konsumsi">Konsumsi</label>
+        <input type="checkbox" id="k_modul" name="kebutuhan" value="modul">
+        <label for="k_modul">Modul cetak</label>
+        <input type="checkbox" id="k_sertifikat" name="kebutuhan" value="sertifikat">
+        <label for="k_sertifikat">Sertifikat</label>
+        <br><br>
+        <label for="k_alasan">Alasan mengikuti:</label><br>
+        <textarea id="k_alasan" name="alasan" rows="5" cols="40"></textarea>
+        <br><br>
+        <button type="submit">Daftar</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+
+    <hr>
+    <p><a href="index.html">Kembali ke Beranda</a> | <a href="semantic.html">Lihat halaman Semantic</a></p>
+  </main>
+  <footer>
+    <hr>
+    <p>Abdullah Wafi - NIM 2025010005 - Praktikum Pemrograman Web 1 - HTML Lanjutan</p>
+  </footer>
+</body>
+</html>

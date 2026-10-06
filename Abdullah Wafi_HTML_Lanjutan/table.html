@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Table - HTML Lanjutan</title>
+</head>
+<body>
+  <!-- Kepala halaman dan navigasi -->
+  <header>
+    <h1>Latihan Table</h1>
+    <nav>
+      <a href="index.html">Beranda</a> |
+      <a href="list.html">List</a> |
+      <a href="table.html">Table</a> |
+      <a href="form.html">Form</a> |
+      <a href="semantic.html">Semantic</a> |
+      <a href="kegiatan.html">Kegiatan</a> |
+      <a href="debugging.html">Debugging</a>
+    </nav>
+    <hr>
+  </header>
+  <main>
+    <!-- Praktik 4 -->
+    <section>
+      <h2>Data Mahasiswa</h2>
+      <table border="1">
+        <caption>Daftar Mahasiswa RPL</caption>
+        <tr>
+          <th>NIM</th><th>Nama</th><th>Program Studi</th><th>Alamat</th>
+        </tr>
+        <tr><td>23001</td><td>Andi</td><td>RPL</td><td>Semarang</td></tr>
+        <tr><td>23002</td><td>Budi</td><td>RPL</td><td>Demak</td></tr>
+        <tr><td>23003</td><td>Citra</td><td>RPL</td><td>Kudus</td></tr>
+        <tr><td>23004</td><td>Dewi</td><td>RPL</td><td>Ungaran</td></tr>
+        <tr><td>23005</td><td>Eko</td><td>RPL</td><td>Salatiga</td></tr>
+        <tr><td>23006</td><td>Fajar</td><td>RPL</td><td>Kendal</td></tr>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- Praktik 5 -->
+    <section>
+      <h2>Data Penjualan</h2>
+      <table border="1">
+        <caption>Transaksi Maret 2026</caption>
+        <tr>
+          <th>Tanggal</th><th>Pelanggan</th><th>Produk</th><th>Jumlah</th><th>Harga (Rp)</th><th>Total (Rp)</th>
+        </tr>
+        <tr><td>02-03-2026</td><td>Andi</td><td>Keyboard</td><td>2</td><td>150.000</td><td>300.000</td></tr>
+        <tr><td>02-03-2026</td><td>Sari</td><td>Mouse</td><td>1</td><td>80.000</td><td>80.000</td></tr>
+        <tr><td>03-03-2026</td><td>Budi</td><td>Mouse</td><td>3</td><td>80.000</td><td>240.000</td></tr>
+        <tr><td>04-03-2026</td><td>Dewi</td><td>Keyboard</td><td>1</td><td>150.000</td><td>150.000</td></tr>
+        <tr><td>05-03-2026</td><td>Rina</td><td>Mouse</td><td>2</td><td>80.000</td><td>160.000</td></tr>
+        <tr><td>06-03-2026</td><td>Joko</td><td>Keyboard</td><td>3</td><td>150.000</td><td>450.000</td></tr>
+        <tr><td>07-03-2026</td><td>Sari</td><td>Keyboard</td><td>1</td><td>150.000</td><td>150.000</td></tr>
+        <tr><td>08-03-2026</td><td>Andi</td><td>Mouse</td><td>4</td><td>80.000</td><td>320.000</td></tr>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- Praktik 6 -->
+    <section>
+      <h2>Jadwal Kuliah (colspan dan rowspan)</h2>
+      <table border="1">
+        <tr><th colspan="3">Jadwal Kuliah</th></tr>
+        <tr><th>Hari</th><th>Jam</th><th>Mata Kuliah</th></tr>
+        <tr><td rowspan="2">Senin</td><td>08.00</td><td>Pemrograman Web</td></tr>
+        <tr><td>10.00</td><td>Basis Data</td></tr>
+        <tr><td rowspan="2">Selasa</td><td>08.00</td><td>Algoritma dan Pemrograman</td></tr>
+        <tr><td>13.00</td><td>Bahasa Inggris</td></tr>
+        <tr><td rowspan="2">Rabu</td><td>09.00</td><td>Jaringan Komputer</td></tr>
+        <tr><td>11.00</td><td>Praktikum Pemrograman Web</td></tr>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <hr>
+    <p>Abdullah Wafi - NIM 2025010005 - Praktikum Pemrograman Web 1 - HTML Lanjutan</p>
+  </footer>
+</body>
+</html>

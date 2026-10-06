@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Debugging - HTML Lanjutan</title>
+</head>
+<body>
+  <!-- Kepala halaman dan navigasi -->
+  <header>
+    <h1>Debugging HTML Lanjutan</h1>
+    <nav>
+      <a href="index.html">Beranda</a> |
+      <a href="list.html">List</a> |
+      <a href="table.html">Table</a> |
+      <a href="form.html">Form</a> |
+      <a href="semantic.html">Semantic</a> |
+      <a href="kegiatan.html">Kegiatan</a> |
+      <a href="debugging.html">Debugging</a>
+    </nav>
+    <hr>
+  </header>
+  <main>
+    <section>
+      <h2>Kode Awal yang Bermasalah</h2>
+      <pre>
+&lt;ul&gt;
+  &lt;li&gt;Abdullah&lt;/li&gt;
+  &lt;li&gt;Wafi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nama&lt;/th&gt;&lt;th&gt;Email&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Abdullah&lt;/td&gt;&lt;td&gt;abdullah@email.com&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Wafi&lt;/td&gt;&lt;td&gt;wafi@email.com&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;form&gt;
+  &lt;label for="nama"&gt;Nama&lt;/label&gt;
+  &lt;input type="text" id="nama" name="nama"&gt;
+  &lt;button type="submit"&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;
+      </pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Masalah yang Ditemukan dan Perbaikannya</h2>
+      <ol>
+        <li>Item pertama list (<code>&lt;li&gt;Abdullah&lt;/li&gt;</code>) tidak memiliki penutup. Perbaikan: tambahkan <code>&lt;/li&gt;</code>.</li>
+        <li>Tabel hanya memiliki satu baris data. Struktur tag sudah benar, tetapi data ditambah agar tabel lebih lengkap.</li>
+        <li>Label form tidak memakai tanda titik dua sehingga kurang jelas. Perbaikan: ubah menjadi <code>Nama:</code>.</li>
+        <li>Field nama dan email belum diberi <code>placeholder</code> dan <code>required</code>. Perbaikan: tambahkan atribut tersebut.</li>
+        <li>Kode awal berupa potongan tanpa DOCTYPE, html, head, title, dan body. Perbaikan: halaman ini memakai struktur dokumen lengkap.</li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Hasil Setelah Diperbaiki</h2>
+      <h3>List</h3>
+      <ul>
+        <li>Abdullah</li>
+        <li>Wafi</li>
+      </ul>
+      <h3>Tabel</h3>
+      <table border="1">
+        <tr>
+          <th>Nama</th><th>Email</th>
+        </tr>
+        <tr>
+          <td>Abdullah</td><td>abdullah@email.com</td>
+        </tr>
+        <tr>
+          <td>Wafi</td><td>wafi@email.com</td>
+        </tr>
+      </table>
+      <h3>Form</h3>
+      <form>
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+        <br><br>
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <hr>
+    <p>Abdullah Wafi - NIM 2025010005 - Praktikum Pemrograman Web 1 - HTML Lanjutan</p>
+  </footer>
+</body>
+</html>

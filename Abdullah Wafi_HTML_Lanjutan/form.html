@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form - HTML Lanjutan</title>
+</head>
+<body>
+  <!-- Kepala halaman dan navigasi -->
+  <header>
+    <h1>Latihan Form dan Input</h1>
+    <nav>
+      <a href="index.html">Beranda</a> |
+      <a href="list.html">List</a> |
+      <a href="table.html">Table</a> |
+      <a href="form.html">Form</a> |
+      <a href="semantic.html">Semantic</a> |
+      <a href="kegiatan.html">Kegiatan</a> |
+      <a href="debugging.html">Debugging</a>
+    </nav>
+    <hr>
+  </header>
+  <main>
+    <!-- Praktik 7, 8, 14: form dasar -->
+    <section>
+      <h2>Form Dasar dan Tipe Input</h2>
+      <form>
+        <label for="a_nama">Nama:</label>
+        <input type="text" id="a_nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        <br><br>
+        <label for="a_nim">NIM:</label>
+        <input type="text" id="a_nim" name="nim" placeholder="Contoh: 2301001" required>
+        <br><br>
+        <label for="a_email">Email:</label>
+        <input type="email" id="a_email" name="email" placeholder="nama@email.com" required>
+        <br><br>
+        <label for="a_username">Username:</label>
+        <input type="text" id="a_username" name="username" required>
+        <br><br>
+        <label for="a_password">Password:</label>
+        <input type="password" id="a_password" name="password" required>
+        <br><br>
+        <label for="a_status">Status:</label>
+        <input type="text" id="a_status" name="status" value="Mahasiswa">
+        <br><br>
+        <label for="a_alamat">Alamat:</label><br>
+        <textarea id="a_alamat" name="alamat" rows="4" cols="40"></textarea>
+        <br><br>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- Praktik 9: number, date, tel -->
+    <section>
+      <h2>Form Pemesanan</h2>
+      <form>
+        <label for="b_jumlah">Jumlah (1-10):</label>
+        <input type="number" id="b_jumlah" name="jumlah" min="1" max="10" value="1">
+        <br><br>
+        <label for="b_tanggal">Tanggal Pesan:</label>
+        <input type="date" id="b_tanggal" name="tanggal">
+        <br><br>
+        <label for="b_telepon">Telepon:</label>
+        <input type="tel" id="b_telepon" name="telepon" placeholder="08xxxxxxxxxx">
+        <br><br>
+        <button type="submit">Pesan</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- Praktik 10-13: radio, checkbox, select, textarea -->
+    <section>
+      <h2>Radio, Checkbox, Select, dan Textarea</h2>
+      <form>
+        <p>Metode Pembayaran (pilih satu):</p>
+        <input type="radio" id="c_transfer" name="pembayaran" value="transfer">
+        <label for="c_transfer">Transfer Bank</label>
+        <input type="radio" id="c_cod" name="pembayaran" value="cod">
+        <label for="c_cod">COD</label>
+        <input type="radio" id="c_ewallet" name="pembayaran" value="ewallet">
+        <label for="c_ewallet">E-Wallet</label>
+        <input type="radio" id="c_kartu" name="pembayaran" value="kartu">
+        <label for="c_kartu">Kartu Kredit</label>
+
+        <p>Minat (boleh pilih lebih dari satu):</p>
+        <input type="checkbox" id="c_web" name="minat" value="web">
+        <label for="c_web">Web</label>
+        <input type="checkbox" id="c_mobile" name="minat" value="mobile">
+        <label for="c_mobile">Mobile</label>
+        <input type="checkbox" id="c_data" name="minat" value="data">
+        <label for="c_data">Data</label>
+        <input type="checkbox" id="c_game" name="minat" value="game">
+        <label for="c_game">Game</label>
+        <input type="checkbox" id="c_desain" name="minat" value="desain">
+        <label for="c_desain">Desain</label>
+        <br><br>
+
+        <label for="c_prodi">Program Studi:</label>
+        <select id="c_prodi" name="prodi">
+          <option value="rpl">Rekayasa Perangkat Lunak</option>
+          <option value="bd">Bisnis Digital</option>
+          <option value="si">Sistem Informasi</option>
+          <option value="ti">Teknik Informatika</option>
+          <option value="mi">Manajemen Informatika</option>
+        </select>
+        <br><br>
+        <label for="c_kota">Kota:</label>
+        <select id="c_kota" name="kota">
+          <option value="semarang">Semarang</option>
+          <option value="solo">Surakarta</option>
+          <option value="yogyakarta">Yogyakarta</option>
+        </select>
+        <br><br>
+        <label for="c_kategori">Kategori Produk:</label>
+        <select id="c_kategori" name="kategori">
+          <option value="elektronik">Elektronik</option>
+          <option value="fashion">Fashion</option>
+          <option value="buku">Buku</option>
+        </select>
+        <br><br>
+        <label for="c_pesan">Pesan:</label><br>
+        <textarea id="c_pesan" name="pesan" rows="5" cols="40"></textarea>
+        <br><br>
+        <label for="c_deskripsi">Deskripsi Produk:</label><br>
+        <textarea id="c_deskripsi" name="deskripsi" rows="5" cols="40"></textarea>
+        <br><br>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- Praktik 15: button -->
+    <section>
+      <h2>Perbedaan Tipe Button</h2>
+      <form>
+        <label for="d_nama">Nama:</label>
+        <input type="text" id="d_nama" name="nama">
+        <br><br>
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+        <button type="button">Tombol Biasa</button>
+      </form>
+      <ul>
+        <li><strong>submit</strong>: mengirim data form.</li>
+        <li><strong>reset</strong>: mengembalikan seluruh isian ke nilai awal.</li>
+        <li><strong>button</strong>: tidak melakukan apa pun tanpa JavaScript.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- Praktik 16: registrasi lengkap -->
+    <section>
+      <h2>Form Registrasi Mahasiswa</h2>
+      <form>
+        <label for="e_nama">Nama:</label>
+        <input type="text" id="e_nama" name="nama" placeholder="Nama lengkap" required>
+        <br><br>
+        <label for="e_email">Email:</label>
+        <input type="email" id="e_email" name="email" placeholder="nama@email.com" required>
+        <br><br>
+        <label for="e_password">Password:</label>
+        <input type="password" id="e_password" name="password" required>
+        <br><br>
+        <label for="e_lahir">Tanggal Lahir:</label>
+        <input type="date" id="e_lahir" name="tanggal_lahir" required>
+        <br><br>
+        <label for="e_telepon">Telepon:</label>
+        <input type="tel" id="e_telepon" name="telepon" placeholder="08xxxxxxxxxx">
+        <br><br>
+        <p>Jenis Kelamin:</p>
+        <input type="radio" id="e_pria" name="gender" value="pria" required>
+        <label for="e_pria">Laki-laki</label>
+        <input type="radio" id="e_wanita" name="gender" value="wanita">
+        <label for="e_wanita">Perempuan</label>
+        <p>Minat:</p>
+        <input type="checkbox" id="e_web" name="minat" value="web">
+        <label for="e_web">Web</label>
+        <input type="checkbox" id="e_mobile" name="minat" value="mobile">
+        <label for="e_mobile">Mobile</label>
+        <input type="checkbox" id="e_data" name="minat" value="data">
+        <label for="e_data">Data</label>
+        <br><br>
+        <label for="e_prodi">Program Studi:</label>
+        <select id="e_prodi" name="prodi">
+          <option value="rpl">Rekayasa Perangkat Lunak</option>
+          <option value="bd">Bisnis Digital</option>
+          <option value="si">Sistem Informasi</option>
+        </select>
+        <br><br>
+        <label for="e_alamat">Alamat:</label><br>
+        <textarea id="e_alamat" name="alamat" rows="4" cols="40"></textarea>
+        <br><br>
+        <button type="submit">Daftar</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <hr>
+    <p>Abdullah Wafi - NIM 2025010005 - Praktikum Pemrograman Web 1 - HTML Lanjutan</p>
+  </footer>
+</body>
+</html>
