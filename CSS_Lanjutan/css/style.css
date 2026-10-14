@@ -1,0 +1,165 @@
+/* ==========================================================
+   PRAKTIK 30 — MINI PROJECT WEBSITE RESPONSIF
+   Flexbox : navigasi dan bagian profil
+   Grid    : kartu pendidikan dan katalog produk
+   Breakpoint : 800px (tablet) dan 500px (ponsel)
+   ========================================================== */
+
+/* ---------- Dasar ---------- */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f2f2f2;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: #1f4e79; }
+ul { padding-left: 20px; margin: 0; }
+li { margin-bottom: 6px; }
+p { margin: 0 0 10px 0; }
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    color: #1f4e79;
+    margin-top: 0;
+    overflow-wrap: break-word;
+}
+
+.penting { color: #c0392b; font-weight: bold; }
+
+/* ---------- Header ---------- */
+.header {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1f4e79;
+}
+.header h1 { margin: 0 0 8px 0; font-size: 36px; color: #ffffff; }
+.subjudul { margin: 0; color: #dce9f5; font-style: italic; }
+
+/* ---------- Navigasi (Flexbox) ---------- */
+.navigasi {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    padding: 12px 20px;
+    background-color: #12304b;
+}
+.navigasi a {
+    padding: 4px 10px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.navigasi a:hover { background-color: #2e8b57; }
+
+/* ---------- Konten ---------- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+[id] { scroll-margin-top: 70px; }
+.bagian { margin-bottom: 32px; }
+.container h2 { padding-bottom: 6px; border-bottom: 2px dashed #1f4e79; }
+
+/* ---------- Profil (Flexbox) ---------- */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 12px;
+}
+.foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 140px;
+    width: 140px;
+    height: 140px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #2e8b57;
+    border: 4px solid #1e5c3a;
+    border-radius: 50%;
+}
+.hero-teks { flex: 1; min-width: 0; }
+
+/* ---------- Pendidikan dan Pengalaman (Grid) ---------- */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+.kartu {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 10px;
+}
+
+/* ---------- Katalog Produk (Grid) ---------- */
+.katalog {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+.kartu-produk {
+    padding: 12px;
+    background-color: #eaf2e3;
+    border: 2px solid #2e8b57;
+    border-radius: 12px;
+}
+.kartu-produk img { width: 100%; margin-bottom: 10px; border-radius: 8px; }
+.kartu-produk h3 { margin-bottom: 6px; font-size: 18px; }
+.harga { margin: 0; font-size: 18px; font-weight: bold; color: #c0392b; }
+
+/* ---------- Footer ---------- */
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #333333;
+}
+.footer p { margin: 0; }
+
+/* ==========================================================
+   BREAKPOINT 1 — TABLET (lebar layar 800px ke bawah)
+   ========================================================== */
+@media (max-width: 800px) {
+    .header h1 { font-size: 30px; }
+    .katalog { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ==========================================================
+   BREAKPOINT 2 — PONSEL (lebar layar 500px ke bawah)
+   ========================================================== */
+@media (max-width: 500px) {
+    .header { padding: 28px 16px; }
+    .header h1 { font-size: 26px; }
+
+    .navigasi { justify-content: center; gap: 6px 10px; padding: 10px; font-size: 14px; }
+
+    .container { padding: 16px 12px; }
+
+    .hero { flex-direction: column; padding: 20px; text-align: center; }
+    .foto { flex: 0 0 auto; }
+
+    .info-grid { grid-template-columns: 1fr; }
+    .katalog { grid-template-columns: 1fr; }
+}
